@@ -1,0 +1,10 @@
+.options {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    gap: 5px;
+    z-index: 4;
+    justify-self: flex-end;
+}

@@ -1,0 +1,11 @@
+.footer {
+    top: var(--header-height-normal);
+    color: var(--accent-txt);
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: var(--accent-el);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

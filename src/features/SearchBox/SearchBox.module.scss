@@ -1,0 +1,27 @@
+.searchbox {
+    position: relative;
+    width: 100%;
+    background-color: var(--subaccent-el);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    justify-self: center;
+
+    > input {
+        height: 30px;
+        border-radius: 5px;
+        padding: 0 clamp(5px, 1vw, 10px);
+        transition: all 0.25s ease-in-out;
+        flex-grow: 1;
+        background-color: #fff;
+        color: #232526;
+    }
+}
+
+@media (max-width: 1240px) {
+    .searchbox {
+        grid-area: 2 / 1 / 3 / 3;
+        max-width:calc(1240px - 2 * clamp(10px, 1vw, 20px));
+    }
+}

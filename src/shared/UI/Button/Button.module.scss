@@ -1,0 +1,79 @@
+.button {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--accent-txt);
+    transition: filter 0.15s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--accent-font-family);
+    font-size: clamp(8px, 1.6vw, 16px);
+
+    &:hover {
+        filter: brightness(0.8);
+    }
+}
+
+.button.basic {
+    background-color: var(--subaccent-el);
+}
+
+.button.clear {
+    background: none;
+    width: fit-content;
+    height: fit-content;
+    color: var(--accent-txt);
+}
+
+.button.alfa {
+    width: fit-content;
+    padding: 0 10px;
+    background: none;
+    color: var(--accent-txt);
+}
+
+.button.round {
+    width: 30px;
+    height: 30px;
+    background-color: var(--subaccent-el);
+    border-radius: 100%;
+}
+
+.button.agreement {
+    background-color: green;
+}
+
+.button.warning {
+    background-color: red;
+}
+
+.button.withicon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--subaccent-el);
+
+    svg {
+        flex-grow: 1;
+    }
+
+    span {
+        flex-grow: 1;
+        text-align: left;
+    }
+}
+
+.button.underlined {
+    background: none;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: underline;
+    color: var(--pale-txt);
+
+    font-family: var(--basic-font-family);
+    font-size: clamp(8px, 1.6vw, 16px);
+}
+

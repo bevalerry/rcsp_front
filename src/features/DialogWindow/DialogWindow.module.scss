@@ -1,0 +1,54 @@
+.dialogwindow {
+    position: absolute;
+    top: calc(100% + clamp(10px, 1vw, 20px));
+    width: 100%;
+    min-width: 120px;
+    padding: 50px 5px 5px 5px;
+    display: flex;
+    border-radius: clamp(7px, 1vw, 15px);
+    transition: all 0.25s ease-in-out;
+    animation: appear 0.15s ease-in-out;
+    background-color: var(--main-bg);
+    overflow-x: hidden;
+    z-index: 3;
+
+    .cap {
+        position: absolute;
+        padding: clamp(5px,1vw,10px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--standart-el);
+        color: var(--accent-txt);
+    }
+}
+
+.filtersdialogwindow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: fit-content;
+    padding: clamp(50px, 8vw, 80px) clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: clamp(10px, 2vw, 20px);
+    transition: all 0.25s ease-in-out;
+    animation: appear 0.15s ease-in-out;
+    background-color: var(--main-bg);
+    z-index: -1;
+}
+
+@keyframes appear {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}

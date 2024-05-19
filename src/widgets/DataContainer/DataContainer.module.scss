@@ -1,0 +1,81 @@
+.datacontainer {
+    position: relative;
+    background-color: var(--sec-bg);
+    border-radius: 5px;
+    padding: clamp(45px, 6vw, 60px) clamp(5px, 1vw, 10px) clamp(5px, 1vw, 10px) clamp(5px, 1vw, 10px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+
+    > .cap {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: clamp(35px, 5vw, 50px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        color: var(--accent-txt);
+        line-height: 0;
+        background-color: var(--standart-el);
+    }
+}
+
+.collapsable {
+    min-height: clamp(35px, 5vw, 50px);
+    transition: max-height 0.5s ease-in-out;
+
+    > .cap {
+        cursor: pointer;
+        transition: all 0.15s ease-in-out;
+
+        svg {
+            color: var(--accent-txt);
+            right: calc((80px - clamp(15px, 3vw,30px)) / 2);
+            transition: rotate 0.15s ease-in-out;
+            rotate: 45deg;
+        }
+    }
+
+    > .cap::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: unset;
+        transition: background-color 0.15s ease-in-out;
+        z-index: 0;
+    }
+
+    > .cap > * {
+        z-index: 1;
+    }
+
+    > .cap:hover::before {
+        background-color: var(--accent-el);
+    }
+
+    > .cap + * {
+        margin-top: 0px;
+        transition: margin-top 0.25s ease-in-out;
+    }
+}
+
+.collapsed {
+    > .cap {
+        background-color: var(--standart-el);
+        svg {
+            rotate: 0deg;
+        }
+    }
+    
+}

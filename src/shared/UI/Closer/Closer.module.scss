@@ -1,0 +1,10 @@
+.closer {
+    justify-self: flex-end;
+    color: var(--accent-txt);
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.closer:hover {
+    color: red;
+}

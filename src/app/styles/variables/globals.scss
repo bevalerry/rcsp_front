@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "Travels";
+    src: url('./fonts/TT Travels Next Trial Bold.ttf');
+}
+
+@font-face {
+    font-family: "Klukva";
+    src: url('./fonts/Klukva_version_01.otf');
+}
+
+:root {
+    --accent-font-family: "Travels";
+    --basic-font-family: "Klukva";
+    --header-height-normal: 90px;
+    --sidebar-width: clamp(100px, 20vw,200px);
+}

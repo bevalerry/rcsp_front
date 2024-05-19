@@ -3,7 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import Cookies from "universal-cookie";
 
 const API_DEV_URL = 'http://localhost:5000'
-const API_PROD_URL = ''
+const API_PROD_URL = 'https://rcsp-back.onrender.com'
 export const API_URL = `${import.meta.env.MODE === "production"
     ? API_PROD_URL 
     : API_DEV_URL}/api`
